@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         recycler_layout.addOnItemTouchListener(recyclerTouchListener);
+        setupView();
 
 
     }
@@ -83,6 +84,24 @@ public class MainActivity extends AppCompatActivity {
         menu_aboutus = findViewById(R.id.menu_aboutus);
         menu_account = findViewById(R.id.menu_account);
 
+
+        menu_aboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), AboutUs.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        menu_feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), feedback.class);
+                startActivity(i);
+            }
+        });
 
 
 
