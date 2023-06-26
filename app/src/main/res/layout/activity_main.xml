@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+ <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/recycler_layout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+     app:layout_constraintTop_toTopOf="parent"
+     tools:ignore="MissingConstraints" />
+
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/constraintLayout2"
+     android:layout_width="match_parent"
+     android:layout_height="66dp"
+     android:background="@color/primary2"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintStart_toStartOf="parent">
+
+  <LinearLayout
+      android:id="@+id/menu_addCar"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+   <ImageView
+       android:id="@+id/addCarIcon"
+       android:layout_width="51dp"
+       android:layout_height="42dp"
+       android:layout_gravity="center"
+       app:srcCompat="@drawable/addhotel" />
+
+   <TextView
+       android:id="@+id/addCarText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="Add Car" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/menu_feedback"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/menu_addCar">
+
+   <ImageView
+       android:id="@+id/FeedbackIcon"
+       android:layout_width="49dp"
+       android:layout_height="33dp"
+       android:layout_gravity="center"
+       android:layout_marginTop="7dp"
+       app:srcCompat="@drawable/feedback" />
+
+   <TextView
+       android:id="@+id/FeedbackText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:layout_marginTop="2dp"
+       android:text="Feedback" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/menu_home"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/menu_aboutus"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/menu_feedback">
+
+   <ImageView
+       android:id="@+id/homeIcon"
+       android:layout_width="49dp"
+       android:layout_height="44dp"
+       android:layout_gravity="center"
+       app:srcCompat="@drawable/home" />
+
+   <TextView
+       android:id="@+id/homeText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="Home" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/menu_aboutus"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/menu_account">
+
+   <ImageView
+       android:id="@+id/aboutusIcon"
+       android:layout_width="46dp"
+       android:layout_height="39dp"
+       android:layout_gravity="center"
+       android:layout_marginTop="5dp"
+       app:srcCompat="@drawable/aboutus" />
+
+   <TextView
+       android:id="@+id/aboutusText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="About Us" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/menu_account"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+   <ImageView
+       android:id="@+id/accountIcon"
+       android:layout_width="46dp"
+       android:layout_height="37dp"
+       android:layout_gravity="center"
+       android:layout_marginTop="5dp"
+       app:srcCompat="@drawable/account" />
+
+   <TextView
+       android:id="@+id/accountText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="Profile" />
+  </LinearLayout>
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
