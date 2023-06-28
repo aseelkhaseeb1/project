@@ -1,5 +1,6 @@
 package com.example.hotels_app;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout menu_aboutus;
     private LinearLayout menu_account;
     private RecyclerView recycler_layout;
+    private LinearLayout menu_search;
 
 
     @Override
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("WrongViewCast")
     private void setupView() {
 
         menu_addCar = findViewById(R.id.menu_addCar);
@@ -83,12 +86,23 @@ public class MainActivity extends AppCompatActivity {
         menu_home = findViewById(R.id.menu_home);
         menu_aboutus = findViewById(R.id.menu_aboutus);
         menu_account = findViewById(R.id.menu_account);
+        menu_search=findViewById(R.id.menu_search);
 
 
         menu_aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), AboutUs.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        menu_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), SearchActivity.class);
                 startActivity(i);
             }
         });

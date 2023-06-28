@@ -45,7 +45,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
-       android:text="Add Car" />
+       android:text="Add Hotel" />
   </LinearLayout>
 
   <LinearLayout
@@ -98,6 +98,10 @@
        android:text="Home" />
   </LinearLayout>
 
+
+
+
+
   <LinearLayout
       android:id="@+id/menu_aboutus"
       android:layout_width="83dp"
@@ -145,6 +149,34 @@
        android:layout_gravity="center"
        android:text="Profile" />
   </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/menu_search"
+      android:layout_width="83dp"
+      android:layout_height="63dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/menu_aboutus"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/menu_feedback">
+
+   <ImageView
+       android:id="@+id/searchIcon"
+       android:layout_width="49dp"
+       android:layout_height="44dp"
+       android:layout_gravity="center"
+       app:srcCompat="@drawable/sd" />
+
+   <TextView
+       android:id="@+id/searchText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="Search Hotel" />
+  </LinearLayout>
+
+
+
  </androidx.constraintlayout.widget.ConstraintLayout>
 
 
