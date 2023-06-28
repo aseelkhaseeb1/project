@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,31 +6,29 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
  <androidx.recyclerview.widget.RecyclerView
      android:id="@+id/recycler_layout"
      android:layout_width="match_parent"
-     android:layout_height="match_parent"
+     android:layout_height="0dp"
      app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
      app:layout_constraintTop_toTopOf="parent"
-     tools:ignore="MissingConstraints" />
+     tools:ignore="UnknownId" />
 
-
- <androidx.constraintlayout.widget.ConstraintLayout
-     android:id="@+id/constraintLayout2"
+ <LinearLayout
+     android:id="@+id/bottom_menu"
      android:layout_width="match_parent"
      android:layout_height="66dp"
      android:background="@color/primary2"
      app:layout_constraintBottom_toBottomOf="parent"
-     app:layout_constraintStart_toStartOf="parent">
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent">
 
   <LinearLayout
       android:id="@+id/menu_addCar"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
    <ImageView
        android:id="@+id/addCarIcon"
@@ -50,11 +47,10 @@
 
   <LinearLayout
       android:id="@+id/menu_feedback"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="@+id/menu_addCar">
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
    <ImageView
        android:id="@+id/FeedbackIcon"
@@ -74,14 +70,33 @@
   </LinearLayout>
 
   <LinearLayout
+      android:id="@+id/menu_search"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
+
+   <ImageView
+       android:id="@+id/searchIcon"
+       android:layout_width="49dp"
+       android:layout_height="44dp"
+       android:layout_gravity="center"
+       app:srcCompat="@drawable/sd" />
+
+   <TextView
+       android:id="@+id/searchText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="Search Hotel" />
+  </LinearLayout>
+
+  <LinearLayout
       android:id="@+id/menu_home"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/menu_aboutus"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toEndOf="@+id/menu_feedback">
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
    <ImageView
        android:id="@+id/homeIcon"
@@ -98,17 +113,12 @@
        android:text="Home" />
   </LinearLayout>
 
-
-
-
-
   <LinearLayout
       android:id="@+id/menu_aboutus"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/menu_account">
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
    <ImageView
        android:id="@+id/aboutusIcon"
@@ -128,11 +138,10 @@
 
   <LinearLayout
       android:id="@+id/menu_account"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent">
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:orientation="vertical">
 
    <ImageView
        android:id="@+id/accountIcon"
@@ -150,34 +159,6 @@
        android:text="Profile" />
   </LinearLayout>
 
-  <LinearLayout
-      android:id="@+id/menu_search"
-      android:layout_width="83dp"
-      android:layout_height="63dp"
-      android:orientation="vertical"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/menu_aboutus"
-      app:layout_constraintHorizontal_bias="0.5"
-      app:layout_constraintStart_toEndOf="@+id/menu_feedback">
-
-   <ImageView
-       android:id="@+id/searchIcon"
-       android:layout_width="49dp"
-       android:layout_height="44dp"
-       android:layout_gravity="center"
-       app:srcCompat="@drawable/sd" />
-
-   <TextView
-       android:id="@+id/searchText"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center"
-       android:text="Search Hotel" />
-  </LinearLayout>
-
-
-
- </androidx.constraintlayout.widget.ConstraintLayout>
-
+ </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
