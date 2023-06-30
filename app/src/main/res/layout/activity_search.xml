@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary2"
     tools:context=".SearchActivity">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".SearchActivity">
@@ -27,10 +27,17 @@
             android:layout_below="@id/hotelSpinner"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#1C2C87"
+            android:textColor="#BAD7E9"
             android:text="Search" />
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/sse" />
 
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

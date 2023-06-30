@@ -4,15 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#E6EEF3"
+
     tools:context=".MainActivity">
 
- <androidx.recyclerview.widget.RecyclerView
-     android:id="@+id/recycler_layout"
-     android:layout_width="match_parent"
-     android:layout_height="0dp"
-     app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-     app:layout_constraintTop_toTopOf="parent"
-     tools:ignore="UnknownId,UnknownIdInLayout" />
+ <LinearLayout
+     android:layout_width="332dp"
+     android:layout_height="558dp"
+     android:layout_marginTop="48dp"
+     android:orientation="vertical"
+     app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
+
+  <TextView
+      android:id="@+id/textView6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:fontFamily="monospace"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:text="Welcome to the hotel reservation application"
+      android:textColor="#1C2C87"
+      android:textSize="23sp"
+
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0" />
+
+  <ImageView
+      android:id="@+id/imageView4"
+      android:layout_width="match_parent"
+      android:layout_height="425dp"
+      app:srcCompat="@drawable/aaaa" />
+ </LinearLayout>
 
  <LinearLayout
      android:id="@+id/bottom_menu"
@@ -79,16 +105,18 @@
    <ImageView
        android:id="@+id/searchIcon"
        android:layout_width="49dp"
-       android:layout_height="44dp"
+       android:layout_height="33dp"
        android:layout_gravity="center"
-       app:srcCompat="@drawable/sd" />
+       android:layout_marginTop="7dp"
+       app:srcCompat="@drawable/assss" />
 
    <TextView
        android:id="@+id/searchText"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
-       android:text="Search Hotel" />
+       android:layout_marginTop="2dp"
+       android:text="Search " />
   </LinearLayout>
 
   <LinearLayout
@@ -159,6 +187,10 @@
        android:text="Profile" />
   </LinearLayout>
 
+
  </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
