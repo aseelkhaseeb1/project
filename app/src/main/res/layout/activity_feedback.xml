@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary2"
+    android:background="@color/secondary2"
     tools:context=".feedback">
 
     <ImageView
@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/car_white" />
+        app:srcCompat="@drawable/aa" />
 
     <TextView
         android:id="@+id/thanks_txt"
@@ -26,7 +26,7 @@
         android:fontFamily="monospace"
         android:gravity="center"
         android:text="We Hope you Enjoyed your Experience With Us!"
-        android:textColor="#FFFFFF"
+        android:textColor="#1C2C87"
         android:textSize="23sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
         android:fontFamily="monospace"
         android:gravity="center"
         android:text="Write a Review"
-        android:textColor="#FFFFFF"
+        android:textColor="#1C2C87"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         android:hint="Tell Us Your Thoughts!"
         android:inputType="textMultiLine"
         android:lines="10"
-        android:textColorHint="@color/white"
+        android:textColorHint="#1C2C87"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stars_img" />
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:width="180dp"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="#1C2C87"
         android:gravity="center"
         android:text="send feedback"
         app:layout_constraintEnd_toEndOf="parent"

@@ -30,46 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recycler_layout = findViewById(R.id.recycler_layout);
 
-        String[] captions = new String[HomeHotelCard.hotels.length];
-        int[] ids = new int[HomeHotelCard.hotels.length];
-        int[] price = new int[HomeHotelCard.hotels.length];
-
-        for (int i = 0; i < captions.length; i++) {
-            captions[i] = HomeHotelCard.hotels[i].getName();
-            ids[i] = HomeHotelCard.hotels[i].getImageUrl();
-            price[i] = (int) HomeHotelCard.hotels[i].getPrice();
-        }
-        recycler_layout.setLayoutManager(new LinearLayoutManager(this));
-        HomeHotelCardAdaptor adapter = new HomeHotelCardAdaptor(captions, ids, price);
-        recycler_layout.setAdapter(adapter);
-
-        RecyclerView.OnItemTouchListener recyclerTouchListener;
-
-        recyclerTouchListener = new RecyclerView.OnItemTouchListener() {
-            @Override
-            public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
-                View childView = rv.findChildViewUnder(e.getX(), e.getY());
-                if (childView != null && e.getAction() == MotionEvent.ACTION_UP) {
-                    int position = rv.getChildAdapterPosition(childView);
-                    Intent intent = new Intent(MainActivity.this, DescriptionHotels.class);
-                    intent.putExtra("hotelName", HomeHotelCard.hotels[position].getName());
-                    intent.putExtra("hotelImageId", HomeHotelCard.hotels[position].getImageUrl());
-                    intent.putExtra("hotelPrice", HomeHotelCard.hotels[position].getPrice());
-
-
-                    startActivity(intent);
-                }
-                return false;
-            }
-
-            @Override
-            public void onTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {}
-
-            @Override
-            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {}
-        };
-
-        recycler_layout.addOnItemTouchListener(recyclerTouchListener);
         setupView();
 
 
@@ -103,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), SearchActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        menu_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), HomePage.class);
                 startActivity(i);
             }
         });

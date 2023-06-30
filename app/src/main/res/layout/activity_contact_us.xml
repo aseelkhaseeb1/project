@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondary2"
     tools:context=".ContactUs">
 
     <ImageView
@@ -88,7 +89,7 @@
         android:layout_height="50dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="+970-5678736728"
+        android:text="+972-597085900"
         android:textColor="#49433A"
         android:textSize="20sp"
         android:textStyle="bold"

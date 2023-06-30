@@ -2,39 +2,15 @@ package com.example.hotels_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,13 +52,13 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
             public void onClick(View v) {
                 String selectedHotelName = hotelSpinner.getSelectedItem().toString();
                 boolean isHotelAvailable = isHotelAvailable(selectedHotelName);
-                String message;
                 if (isHotelAvailable) {
-                    message = "The hotel " + selectedHotelName + " is available.";
+                    Intent intent = new Intent(SearchActivity.this, DescriptionHotels.class);
+                    intent.putExtra("hotelName", selectedHotelName);
+                    startActivity(intent);
                 } else {
-                    message = "The hotel " + selectedHotelName + " is not available.";
+                    Toast.makeText(SearchActivity.this, "The hotel " + selectedHotelName + " is not available.", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(SearchActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -129,14 +105,11 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         return false;
     }
 
-
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 }
