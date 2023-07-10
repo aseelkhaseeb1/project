@@ -7,6 +7,17 @@ public class AttrebuteHotels {
     private String description;
 
 
+    public AttrebuteHotels(String name, double price , String description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+
+    }
+
+
+
+
+
     public static final AttrebuteHotels[] hotels = {
             new AttrebuteHotels("Burj Al Arab" , R.drawable.h1, 1000,"Burj Al Arab: Iconic sail-shaped luxury hotel in Dubai, offering lavish suites and exceptional dining."),
             new AttrebuteHotels("The Ritz-Carlton",R.drawable.h2 , 800,"The Ritz-Carlton: Prestigious luxury hotel known for its elegance and impeccable service, providing exquisite accommodations and fine dining experiences."),

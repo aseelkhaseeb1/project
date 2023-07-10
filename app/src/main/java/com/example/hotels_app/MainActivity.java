@@ -1,101 +1,57 @@
 package com.example.hotels_app;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.LinearLayout;
+import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.hotels_app.R;
+
+import pl.droidsonroids.gif.GifImageView;
+
 
 public class MainActivity extends AppCompatActivity {
+    private GifImageView gifImageView;
 
-
-    private LinearLayout menu_addCar;
-    private LinearLayout menu_feedback;
-    private LinearLayout menu_home;
-    private LinearLayout menu_aboutus;
-    private LinearLayout menu_account;
-    private RecyclerView recycler_layout;
-    private LinearLayout menu_search;
-
+    private Animation animation1;
+    private Animation animation2;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recycler_layout = findViewById(R.id.recycler_layout);
 
-        setupView();
+        animation2= AnimationUtils.loadAnimation(this,R.anim.slide_down);
+        animation1= AnimationUtils.loadAnimation(this,R.anim.slide_up);
+        gifImageView = (GifImageView) findViewById(R.id.img_splash);
+        textView=findViewById(R.id.textView);
+        textView.startAnimation(animation1);
+        gifImageView.startAnimation(animation2);
 
-
-    }
-          
-
-
-
-    @SuppressLint("WrongViewCast")
-    private void setupView() {
-
-        menu_addCar = findViewById(R.id.menu_addCar);
-        menu_feedback = findViewById(R.id.menu_feedback);
-        menu_home = findViewById(R.id.menu_home);
-        menu_aboutus = findViewById(R.id.menu_aboutus);
-        menu_account = findViewById(R.id.menu_account);
-        menu_search=findViewById(R.id.menu_search);
+        Handler handler = new Handler();
 
 
-        menu_aboutus.setOnClickListener(new View.OnClickListener() {
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), AboutUs.class);
-                startActivity(i);
+            public void run() {
+
+                    Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                    startActivity(intent);
+                    finish();
+
+
             }
-        });
 
+        }, 4000);
 
-
-        menu_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), SearchActivity.class);
-                startActivity(i);
-            }
-        });
-
-
-
-        menu_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), HomePage.class);
-                startActivity(i);
-            }
-        });
-
-
-
-        menu_feedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), feedback.class);
-                startActivity(i);
-            }
-        });
 
 
 
 
     }
-
-
 }
-
-
-
-
-

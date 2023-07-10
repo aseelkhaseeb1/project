@@ -13,6 +13,8 @@
     <color name="secondary1">#2B3467</color>
     <color name="secondary2">#BAD7E9</color>
     <color name="secondary3">#FCFFE7</color>
+    <color name="blue">#1C85CC</color>
+    <color name="app_color">#FBE7F0</color>
     <color name="warning">#EED202</color>
     <color name="error">#FF0000</color>
 </resources>
