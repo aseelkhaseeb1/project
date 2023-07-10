@@ -57,6 +57,18 @@ public class Main extends AppCompatActivity {
 
 
 
+        menu_addCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), AddHotelActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
+
         menu_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
